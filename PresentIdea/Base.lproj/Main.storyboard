@@ -82,6 +82,9 @@
                     <navigationItem key="navigationItem" id="ekw-S5-ZcI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nwS-Xl-M35">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addPresent:" destination="TZK-Jv-cWQ" id="EsP-I8-qkd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -94,7 +97,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IXZ-o3-DYd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Js6-F7-sLY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Js6-F7-sLY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69803921568627447" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
