@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //StatusBar Text Color
         UIApplication.shared.statusBarStyle = .lightContent
         
+        UINavigationBar.appearance().tintColor = UIColor.white
         
         return true
     }

@@ -80,6 +80,12 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPresentDetail", let destination = segue.destination as? DetailViewController, let cellIndex = tableView.indexPathForSelectedRow?.row {
+            destination.present = presents[cellIndex]
+        }
+    }
 
     @IBAction func addPresent(_ sender: Any) {
         let imagePicker = UIImagePickerController()
