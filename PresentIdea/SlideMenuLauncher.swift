@@ -19,7 +19,6 @@ class SlideMenuLauncher: NSObject {
     }()
     
     func showSlideMenu() {
-        //show menu
         
         if let window = UIApplication.shared.keyWindow {
             
