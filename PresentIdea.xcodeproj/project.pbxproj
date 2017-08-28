@@ -14,6 +14,7 @@
 		285EEF651F54067E0067D38E /* PresentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF641F54067E0067D38E /* PresentsTableViewController.swift */; };
 		285EEF671F5407000067D38E /* PresentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF661F5407000067D38E /* PresentsTableViewCell.swift */; };
 		285EEF6A1F540C600067D38E /* PresentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF681F540C600067D38E /* PresentModel.xcdatamodeld */; };
+		285EEF8D1F5472EE0067D38E /* SlideMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF8C1F5472EE0067D38E /* SlideMenuLauncher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		285EEF641F54067E0067D38E /* PresentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentsTableViewController.swift; sourceTree = "<group>"; };
 		285EEF661F5407000067D38E /* PresentsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentsTableViewCell.swift; sourceTree = "<group>"; };
 		285EEF691F540C600067D38E /* PresentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PresentModel.xcdatamodel; sourceTree = "<group>"; };
+		285EEF8C1F5472EE0067D38E /* SlideMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuLauncher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		285EEF511F53FF400067D38E /* PresentIdea */ = {
 			isa = PBXGroup;
 			children = (
+				285EEF8C1F5472EE0067D38E /* SlideMenuLauncher.swift */,
 				285EEF521F53FF400067D38E /* AppDelegate.swift */,
 				285EEF641F54067E0067D38E /* PresentsTableViewController.swift */,
 				285EEF661F5407000067D38E /* PresentsTableViewCell.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				285EEF531F53FF400067D38E /* AppDelegate.swift in Sources */,
 				285EEF651F54067E0067D38E /* PresentsTableViewController.swift in Sources */,
+				285EEF8D1F5472EE0067D38E /* SlideMenuLauncher.swift in Sources */,
 				285EEF671F5407000067D38E /* PresentsTableViewCell.swift in Sources */,
 				285EEF6A1F540C600067D38E /* PresentModel.xcdatamodeld in Sources */,
 			);
@@ -310,6 +314,7 @@
 				285EEF631F53FF400067D38E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

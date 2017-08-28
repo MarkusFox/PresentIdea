@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,12 +81,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ekw-S5-ZcI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nwS-Xl-M35">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="addPresent:" destination="TZK-Jv-cWQ" id="EsP-I8-qkd"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="nwS-Xl-M35">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addPresent:" destination="TZK-Jv-cWQ" id="EsP-I8-qkd"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="0VD-FB-CdS">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="handleSlideOutMenu:" destination="TZK-Jv-cWQ" id="Q5u-da-exH"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bfT-Lc-YgS" userLabel="First Responder" sceneMemberID="firstResponder"/>

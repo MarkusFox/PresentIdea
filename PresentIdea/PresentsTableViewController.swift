@@ -36,6 +36,15 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
             print("Could not save data \(error.localizedDescription)")
         }
     }
+    
+    //Code for SlideOut Menu
+    let slideMenuLauncher = SlideMenuLauncher()
+    
+    @IBAction func handleSlideOutMenu(_ sender: Any) {
+        slideMenuLauncher.showSlideMenu()
+    }
+    
+    //SlideOut Menu Code End
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
