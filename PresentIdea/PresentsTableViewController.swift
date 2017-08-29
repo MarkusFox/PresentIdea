@@ -43,8 +43,6 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
     @IBAction func handleSlideOutMenu(_ sender: Any) {
         slideMenuLauncher.showSlideMenu()
     }
-    
-    //SlideOut Menu Code End
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
