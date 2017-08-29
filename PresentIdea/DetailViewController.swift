@@ -17,6 +17,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var receiverName: UILabel!
     @IBOutlet weak var presentName: UILabel!
     
+    @IBAction func deletePresent(_ sender: Any) {
+        do {
+            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+            context.delete(present!)
+            
+            try context.save()
+        } catch {
+            print("Error")
+        }
+        
+        _ = self.navigationController?.popViewController(animated: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

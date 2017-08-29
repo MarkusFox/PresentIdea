@@ -149,7 +149,14 @@
                             <constraint firstItem="GkL-SE-GYV" firstAttribute="top" secondItem="WRd-RR-tq1" secondAttribute="bottom" constant="34" id="wkm-dw-wq1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bpe-fx-10f"/>
+                    <navigationItem key="navigationItem" id="Bpe-fx-10f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="Ydk-O3-2KD">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="deletePresent:" destination="hfh-7V-OKN" id="Exc-Xe-sYA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="presentImage" destination="fuV-2o-qY7" id="uBi-pT-5rK"/>
                         <outlet property="presentName" destination="GkL-SE-GYV" id="mvo-jx-qVz"/>
@@ -184,7 +191,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zdt-6z-wbu" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="BZ4-ci-vnp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="BZ4-ci-vnp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.69803921570000005" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
