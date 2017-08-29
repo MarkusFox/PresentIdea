@@ -16,6 +16,7 @@
 		285EEF6A1F540C600067D38E /* PresentModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF681F540C600067D38E /* PresentModel.xcdatamodeld */; };
 		285EEF8D1F5472EE0067D38E /* SlideMenuLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF8C1F5472EE0067D38E /* SlideMenuLauncher.swift */; };
 		285EEF911F5492D90067D38E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF901F5492D90067D38E /* DetailViewController.swift */; };
+		289EF6B81F559A1600AC4CDF /* SlideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289EF6B71F559A1600AC4CDF /* SlideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		285EEF691F540C600067D38E /* PresentModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PresentModel.xcdatamodel; sourceTree = "<group>"; };
 		285EEF8C1F5472EE0067D38E /* SlideMenuLauncher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuLauncher.swift; sourceTree = "<group>"; };
 		285EEF901F5492D90067D38E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		289EF6B71F559A1600AC4CDF /* SlideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				285EEF5B1F53FF400067D38E /* LaunchScreen.storyboard */,
 				285EEF5E1F53FF400067D38E /* Info.plist */,
 				285EEF901F5492D90067D38E /* DetailViewController.swift */,
+				289EF6B71F559A1600AC4CDF /* SlideMenuTableViewController.swift */,
 			);
 			path = PresentIdea;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289EF6B81F559A1600AC4CDF /* SlideMenuTableViewController.swift in Sources */,
 				285EEF531F53FF400067D38E /* AppDelegate.swift in Sources */,
 				285EEF651F54067E0067D38E /* PresentsTableViewController.swift in Sources */,
 				285EEF8D1F5472EE0067D38E /* SlideMenuLauncher.swift in Sources */,

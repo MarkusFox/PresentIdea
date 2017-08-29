@@ -79,7 +79,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         return cell
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         self.loadData()
     }
     
@@ -114,8 +114,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
     }
     
     func createPresentItem (with image: UIImage) {
-        let presentItem = Present(context: managedObjectContext)
-        presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+        
         
         //Standard Input Alert
         let inputAlert = UIAlertController(title: "New Present", message: "Enter a person and a present", preferredStyle: .alert)
@@ -127,6 +126,9 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         }
         
         inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
+            let presentItem = Present(context: self.managedObjectContext)
+            presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+            
             let personTextField = inputAlert.textFields?.first
             let presentTextField = inputAlert.textFields?.last
             

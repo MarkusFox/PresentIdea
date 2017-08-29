@@ -11,6 +11,8 @@ import UIKit
 class SlideMenuLauncher: NSObject {
     let blackView = UIView()
     
+    let slideView = SlideMenuTableViewController().view!
+    
     let collectionView: UICollectionView = {
         let layout = UICollectionViewLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
@@ -27,12 +29,12 @@ class SlideMenuLauncher: NSObject {
             blackView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
             
             window.addSubview(blackView)
-            window.addSubview(collectionView)
+            window.addSubview(slideView)
             
             let height: CGFloat = 200
             let y = window.frame.height - height
             
-            collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
+            slideView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
             
             blackView.frame = window.frame
             blackView.alpha = 0
@@ -42,7 +44,7 @@ class SlideMenuLauncher: NSObject {
                 
                 self.blackView.alpha = 1
                 
-                self.collectionView.frame = CGRect(x: 0, y: y, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+                self.slideView.frame = CGRect(x: 0, y: y, width: self.slideView.frame.width, height: self.slideView.frame.height)
                 
             }, completion: nil)
         }
@@ -55,7 +57,7 @@ class SlideMenuLauncher: NSObject {
             self.blackView.alpha = 0
             
             if let window = UIApplication.shared.keyWindow {
-                self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+                self.slideView.frame = CGRect(x: 0, y: window.frame.height, width: self.slideView.frame.width, height: self.slideView.frame.height)
             }
         })
     }
