@@ -17,9 +17,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var receiverName: UILabel!
     @IBOutlet weak var presentName: UILabel!
     
+    @IBOutlet weak var obtainedSwitch: UISwitch!
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     @IBAction func deletePresent(_ sender: Any) {
         do {
-            let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
             context.delete(present!)
             
             try context.save()
@@ -30,6 +33,18 @@ class DetailViewController: UIViewController {
         _ = self.navigationController?.popViewController(animated: true)
         
     }
+    
+    @IBAction func switchObtained(_ sender: UISwitch) {
+        do {
+            present?.obtained = sender.isOn
+            
+            try context.save()
+        } catch {
+            print("Error")
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +52,9 @@ class DetailViewController: UIViewController {
         presentName.text = present?.presentName
         if let presentImage = UIImage(data: (present?.image)! as Data) {
             self.presentImage.image = presentImage
+        }
+        if let obtained = present?.obtained {
+            obtainedSwitch.setOn(obtained, animated: true)
         }
     }
 

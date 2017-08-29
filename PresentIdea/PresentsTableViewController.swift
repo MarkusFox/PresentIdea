@@ -135,6 +135,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
             if personTextField?.text != "" && presentTextField?.text != "" {
                 presentItem.person = personTextField?.text
                 presentItem.presentName = presentTextField?.text
+                presentItem.obtained = false
                 
                 do {
                     try self.managedObjectContext.save()
