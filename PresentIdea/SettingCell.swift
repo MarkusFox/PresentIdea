@@ -21,11 +21,9 @@ class SettingCell: UICollectionViewCell {
     
     override var isHighlighted: Bool {
         didSet {
-            backgroundColor = isHighlighted ? UIColor.darkGray : UIColor.white
-            
-            nameLabel.textColor = isHighlighted ? UIColor.white : UIColor.black
-            
-            iconImageView.tintColor = isHighlighted ? UIColor.white : UIColor.darkGray
+            backgroundColor = isHighlighted ? .darkGray : .white
+            nameLabel.textColor = isHighlighted ? .white : .black
+            iconImageView.tintColor = isHighlighted ? .white : .darkGray
         }
     }
     
