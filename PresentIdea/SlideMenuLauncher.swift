@@ -8,17 +8,13 @@
 
 import UIKit
 
-class Setting: NSObject {
+struct Setting {
     let name: String
     let imageName: String
-    
-    init(name: String, imageName: String) {
-        self.name = name
-        self.imageName = imageName
-    }
 }
 
 class SlideMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     let blackView = UIView()
     
     let collectionView: UICollectionView = {
@@ -32,7 +28,7 @@ class SlideMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDat
     let cellHeight: CGFloat = 50
     
     let settings: [Setting] = {
-        return [Setting(name: "Settings", imageName: "settings"), Setting(name: "Terms & privacy policy", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
+        return [Setting(name: "Add Idea from Library", imageName: "settings"), Setting(name: "Add Idea without Image", imageName: "privacy"), Setting(name: "Send Feedback", imageName: "feedback"), Setting(name: "Help", imageName: "help"), Setting(name: "Switch Account", imageName: "switch_account"), Setting(name: "Cancel", imageName: "cancel")]
     }()
     
     func showSlideMenu() {
@@ -96,6 +92,19 @@ class SlideMenuLauncher: NSObject, UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let setting = settings[indexPath.item]
+        //handleDismiss()
+        switch setting.name {
+            case "Cancel":
+            handleDismiss()
+            case "Add Idea from Library":
+            handleDismiss()
+        default:
+            break
+        }
     }
     
     override init() {
