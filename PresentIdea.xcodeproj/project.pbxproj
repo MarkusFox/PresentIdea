@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2801B78F1F583E250066F80E /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801B78E1F583E250066F80E /* SettingCell.swift */; };
+		2801B7911F585C680066F80E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2801B7901F585C680066F80E /* Extensions.swift */; };
 		285EEF531F53FF400067D38E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EEF521F53FF400067D38E /* AppDelegate.swift */; };
 		285EEF581F53FF400067D38E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285EEF561F53FF400067D38E /* Main.storyboard */; };
 		285EEF5A1F53FF400067D38E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 285EEF591F53FF400067D38E /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2801B78E1F583E250066F80E /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		2801B7901F585C680066F80E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		285EEF4F1F53FF400067D38E /* PresentIdea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresentIdea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		285EEF521F53FF400067D38E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		285EEF571F53FF400067D38E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				285EEF5E1F53FF400067D38E /* Info.plist */,
 				285EEF901F5492D90067D38E /* DetailViewController.swift */,
 				2801B78E1F583E250066F80E /* SettingCell.swift */,
+				2801B7901F585C680066F80E /* Extensions.swift */,
 			);
 			path = PresentIdea;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 				285EEF531F53FF400067D38E /* AppDelegate.swift in Sources */,
 				285EEF651F54067E0067D38E /* PresentsTableViewController.swift in Sources */,
 				285EEF8D1F5472EE0067D38E /* SlideMenuLauncher.swift in Sources */,
+				2801B7911F585C680066F80E /* Extensions.swift in Sources */,
 				285EEF911F5492D90067D38E /* DetailViewController.swift in Sources */,
 				2801B78F1F583E250066F80E /* SettingCell.swift in Sources */,
 				285EEF671F5407000067D38E /* PresentsTableViewCell.swift in Sources */,
