@@ -127,7 +127,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         
         inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
             let presentItem = Present(context: self.managedObjectContext)
-            presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!)
+            presentItem.image = NSData(data: UIImageJPEGRepresentation(image, 0.3)!) as Data
             
             let personTextField = inputAlert.textFields?.first
             let presentTextField = inputAlert.textFields?.last
