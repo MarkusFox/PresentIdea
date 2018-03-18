@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Vision
 
 class PresentsTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -115,6 +116,24 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
     
     func createPresentItem (with image: UIImage) {
         
+        var observationString: String = ""
+        //var observationProbability: Float = 0
+        let ciImage = CIImage(image: image)
+        
+        // MARK: COREML PART HERE
+        let model = try? VNCoreMLModel(for: Resnet50().model)
+        
+        let request = VNCoreMLRequest(model: model!) { (request, error) in
+            guard let results = request.results as? [VNClassificationObservation] else { return }
+            guard let topResult = results.first else { return }
+            observationString = topResult.identifier
+            //observationProbability = topResult.confidence * 100
+        }
+
+        let handler = VNImageRequestHandler(ciImage: ciImage!)
+        try? handler.perform([request])
+        
+        // END COREML
         
         //Standard Input Alert
         let inputAlert = UIAlertController(title: "New Present", message: "Enter a person and a present", preferredStyle: .alert)
@@ -122,7 +141,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
             textfield.placeholder = "Person"
         }
         inputAlert.addTextField { (textfield: UITextField) in
-            textfield.placeholder = "Present"
+            textfield.placeholder = observationString
         }
         
         inputAlert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action:UIAlertAction) in
