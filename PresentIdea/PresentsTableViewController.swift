@@ -77,6 +77,12 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         cell.nameLabel.text = presentItem.person
         cell.itemLabel.text = presentItem.presentName
         
+        if presentItem.obtained {
+            cell.checkmarkImageView.alpha = 0.7
+        } else {
+            cell.checkmarkImageView.alpha = 0
+        }
+        
         return cell
     }
     

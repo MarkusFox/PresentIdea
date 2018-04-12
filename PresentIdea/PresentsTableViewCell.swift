@@ -12,6 +12,7 @@ class PresentsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var itemLabel: UILabel!
+    @IBOutlet var checkmarkImageView: UIImageView!
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     

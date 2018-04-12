@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IXZ-o3-DYd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IXZ-o3-DYd">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,6 +56,10 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="CLN-kh-UYi">
+                                            <rect key="frame" x="318" y="54" width="41" height="41"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="bM6-qn-xNv" firstAttribute="leading" secondItem="oo7-Zi-UWZ" secondAttribute="leadingMargin" constant="-8" id="5Wu-aa-YKL"/>
@@ -70,6 +74,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="wrl-YH-EQZ" id="LMH-Hg-wdh"/>
+                                    <outlet property="checkmarkImageView" destination="CLN-kh-UYi" id="hxi-oi-fgI"/>
                                     <outlet property="itemLabel" destination="eI0-75-krb" id="mup-Xy-uFx"/>
                                     <outlet property="nameLabel" destination="bM6-qn-xNv" id="kYD-Gr-ccQ"/>
                                     <segue destination="hfh-7V-OKN" kind="show" identifier="showPresentDetail" id="OcM-E3-QYB"/>
@@ -211,5 +216,6 @@
     </scenes>
     <resources>
         <image name="3" width="187" height="125"/>
+        <image name="checkmark" width="600" height="556"/>
     </resources>
 </document>
