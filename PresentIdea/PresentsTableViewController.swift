@@ -25,6 +25,8 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         loadData()
+        
+        model = try? VNCoreMLModel(for: Resnet50().model)
     }
     
     func loadData() {
@@ -120,6 +122,8 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         
     }
     
+    var model: VNCoreMLModel!
+    
     func createPresentItem (with image: UIImage) {
         
         var observationString: String = ""
@@ -127,7 +131,6 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         let ciImage = CIImage(image: image)
         
         // MARK: COREML PART HERE
-        let model = try? VNCoreMLModel(for: Resnet50().model)
         
         let request = VNCoreMLRequest(model: model!) { (request, error) in
             guard let results = request.results as? [VNClassificationObservation] else { return }
@@ -144,7 +147,7 @@ class PresentsTableViewController: UITableViewController, UIImagePickerControlle
         //Standard Input Alert
         let inputAlert = UIAlertController(title: "New Present", message: "Enter a person and a present", preferredStyle: .alert)
         inputAlert.addTextField { (textfield: UITextField) in
-            textfield.placeholder = "Person"
+            textfield.placeholder = "Dad"
         }
         inputAlert.addTextField { (textfield: UITextField) in
             textfield.placeholder = observationString
